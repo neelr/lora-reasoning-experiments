@@ -1,0 +1,38 @@
+{
+    "output_dir": "./base_reasoning_23456_4chain_vary_lora",
+    "num_epochs": 40,
+    "batch_size": 16,
+    "learning_rate": 3e-05,
+    "train_samples": 15000,
+    "val_samples": 50,
+    "eval_samples": 100,
+    "log_interval": 100,
+    "save_interval": 2,
+    "hash": {
+        "max_hops": 10,
+        "vary_hops": true,
+        "hash_length": 4,
+        "chain_length": 20
+    },
+    "lora": {
+        "use_lora": false,
+        "rank": 128,
+        "alpha": 64,
+        "n_layers_to_modify": 12
+    },
+    "pre_trained_model": "base_reasoning_2345_4chain_vary/model_epoch_40.pt",
+    "reasoning": {
+        "enabled": true,
+        "hash_length": 4,
+        "chains": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "num_chains": 5,
+        "vary_hash": true
+    }
+}
